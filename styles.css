@@ -1,32 +1,203 @@
-body{
-    background-image: linear-gradient(#d7655f, #c2453e);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+@media only screen and (min-width: 800px) {
+
+body {
+    background-color: #5d221e;
     text-align: center;
 }
 
+@keyframes fade {
+    from {
+        opacity: 0%;
+    }
 
-.Name {
-    font-family: sans-serif;
-    font-weight: 1000;
-    font-size: 500%;
-    color: white;
-    text-shadow: 5px 5px 8px #2a2a2a;
+    to {
+        opacity: 100%;
+    }
 }
 
-.button {
-    background-color: #d7655f; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    margin: 10px;
+@keyframes growfade {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 100%;
+        width: 75px;
+        height: 75px;
+    }
+
+    100% {
+        opacity: 0%;
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@keyframes growfade2 {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 100%;
+        width: 50px;
+        height: 50px;
+    }
+
+    100% {
+        opacity: 0%;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+h1 {
+    color: #fff;
+    font-family: Inter, sans-serif;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-family: sans-serif;
-    font-weight: 1000;
-    border-radius: 20px;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    opacity: 0%;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.blue {
+    color: #d8483e;
+
+}
+
+img {
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    outline: 7.5px solid #923832;
+    opacity: 0%;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.buttons {
+    height: 70px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    display: flex;
+    background-color: #5d221e;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.buttons>a {
+    background-color: #923832;
+    padding: 0.8rem;
+    font-size: 2.5rem;
+    border-radius: 20%;
+    margin: 5px;
+    height: 2.5rem;
+    opacity: 0%;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+i {
+    color: #d8483e;
+    opacity: 0%;
+    animation-fill-mode: forwards;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.opener1 {
+    position: absolute;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d8483e;
+    animation-name: growfade;
+    animation-duration: 1.7s;
+    opacity: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.opener2 {
+    position: absolute;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d8483e;
+    animation-name: growfade2;
+    animation-duration: 1.7s;
+    animation-direction: reverse;
+    animation-delay: 1;
+    opacity: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mobile {
+    display: none;
+}
+}
+@media only screen and (max-width: 800px) {
+    body {
+        background-color: #5d221e;
+        text-align: center;
+    }
+    .opener2 {
+        display: none;
+    }
+    .opener1 {
+        display: none;
+    }
+
+    .buttons {
+        display: none;
+    }
+    i {
+        display: none;
+    }
+    img {
+        display: none;
+    }
+    h1 {
+        display: none;
+    }
+    .mobile {
+        color: #fff;
+        font-family: Inter, sans-serif;
+        text-align: center;
+        font-size: x-large;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
