@@ -3,6 +3,7 @@
 body {
     background-color: #5d221e;
     text-align: center;
+    margin: 50px;
 }
 
 @keyframes fade {
